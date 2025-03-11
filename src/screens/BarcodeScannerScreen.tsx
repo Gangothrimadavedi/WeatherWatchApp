@@ -33,14 +33,12 @@ export default function BarcodeScannerScreen() {
 
   return (
     <View style={styles.container}>
-      {/* Barcode Scanner Component */}
       <Camera
         scanBarcode={true} // Enable barcode scanning
         onReadCode={(event) => saveBarcode(event.nativeEvent.codeStringValue)} // Handle barcode scan
         style={styles.camera}
       />
 
-      {/* Display the scanned barcode and history */}
       <View style={styles.historyContainer}>
         <Text style={styles.barcodeText}>Scanned Barcode: {barcode}</Text>
         <Text style={styles.historyTitle}>Scan History:</Text>

@@ -44,8 +44,8 @@ export default function WeatherScreen() {
       await AsyncStorage.setItem('weatherHistory', JSON.stringify(parsedHistory)); // I save updated history
       setHistory(parsedHistory); // I update history state to show new entry
     } catch (error) {
-      console.error('Error fetching weather data:', error); // I log error because something went wrong
-      setError('Invalid ZIP code or network error. Please try again.'); // I show error message to user
+        console.error('Error fetching weather data:', error); // I log error because something went wrong
+        setError('Invalid ZIP code or network error. Please try again.'); // I show error message to user
     }
   };
 
